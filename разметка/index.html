@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bortovik - Панель управления</title>
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --primary-dark: #1565c0;
+            --primary-light: #64b5f6;
+            --accent-color: #4fc3f7;
+            --background: #f5f9ff;
+            --text-color: #263238;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .btn {
+            background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+            border: none;
+            color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(30, 136, 229, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn-continue {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-continue:hover {
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Панель управления роботом</h1>
+</header>
+<div class="container">
+    <a href="working.html" class="btn" id="actionButton">Начать сканирование</a>
+</div>
+<footer>
+    <a href="about.html">О проекте</a>
+</footer>
+
+<script>
+    // Проверяем, был ли пользователь на странице working
+    if(sessionStorage.getItem('wasOnWorkingPage')) {
+        document.getElementById('actionButton').textContent = 'Вернуться к сканированию';
+        document.getElementById('actionButton').classList.add('btn-continue');
+    }
+
+    // При переходе на working.html устанавливаем флаг
+    document.getElementById('actionButton').addEventListener('click', function() {
+        sessionStorage.setItem('wasOnWorkingPage', 'true');
+    });
+</script>
+</body>
+</html>

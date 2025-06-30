@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте Bortovik</title>
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --primary-dark: #1565c0;
+            --primary-light: #64b5f6;
+            --accent-color: #4fc3f7;
+            --background: #f5f9ff;
+            --text-color: #263238;
+            --white: #ffffff;
+            --card-shadow: 0 8px 30px rgba(30, 136, 229, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        .about-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border: 1px solid var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+            background-color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 0 1rem;
+            }
+
+            .about-card {
+                padding: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>О проекте Bortovik</h1>
+</header>
+
+<main>
+    <div class="about-card">
+        <p>
+            <span class="highlight">Робот "Бортовик"</span> – это инновационный автономный подводный аппарат, созданный для комплексного обслуживания корпусов морских и речных судов, который полностью заменяет опасный ручной труд водолазов. Он выполняет плановые осмотры, диагностику повреждений, очистку от биологических обрастаний и контроль состояния антикоррозийных покрытий, используя передовые технологии и искусственный интеллект.
+        </p>
+
+        <p>
+            <span class="highlight">Главное преимущество "Бортовика"</span> – безопасность, так как он исключает риски для водолазов, связанные с переохлаждением, кессонной болезнью и работой в сложных условиях, таких как сильные течения или плохая видимость. С экономической точки зрения робот сокращает стоимость осмотра в три раза – с 150 до 50 тысяч рублей – и уменьшает время простоя судна с трех дней до шести часов, что значительно снижает финансовые потери для судовладельцев.
+        </p>
+
+        <p>
+            <span class="highlight">Качество диагностики</span> благодаря "Бортовику" становится выше за счет алгоритмов ИИ, которые автоматически анализируют состояние корпуса, выявляют даже микротрещины и коррозию, а также формируют детальные отчеты с 3D-моделями. Робот работает автономно, используя гидролокаторы и камеры для навигации, а его модульная конструкция позволяет адаптировать его под разные задачи.
+        </p>
+
+        <p>
+            <span class="highlight">В перспективе</span> "Бортовик" может быть интегрирован в цифровые системы управления флотом, а также расширен для ремонта покрытий и применения в других отраслях, таких как осмотр подводных трубопроводов и гидротехнических сооружений. Этот проект не просто автоматизирует рутинные процессы – он делает судоходство безопаснее, быстрее и экономически эффективнее.
+        </p>
+    </div>
+</main>
+
+<footer>
+    <a href="index.html" class="back-link">Вернуться к панели управления</a>
+</footer>
+</body>
+</html>
